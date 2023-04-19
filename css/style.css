@@ -6,6 +6,7 @@
     align-items: center;
     background-color: hsl(0, 0%, 94%);
     padding: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 .card-bg{
     width: 770px;
@@ -13,6 +14,7 @@
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 25px;
     background-color: white;
 }
 .text-dmy{
@@ -28,6 +30,7 @@
 }
 .flexbox-div{
     margin-left: 30px;
+    margin-top: 30px;
 }
 .input-day,.input-month,.input-year{
     width: 175px;
@@ -36,6 +39,7 @@
     border-color: hsl(0, 0%, 86%);
     border-width: 1px;
     position: relative;
+    margin-top: 30px;
 }
 .input-day{
     margin-left: 20px;
@@ -51,12 +55,21 @@
     border-style: solid;
     opacity: 0.5;
     border-color: hsl(0, 1%, 44%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
 }
 
+.error{
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
+    color: red;
+    font-style : italic;
+}
 #day-id,#month-id,#year-id{
     width: 200px;
     font-family: 'Poppins', sans-serif;
-    font-size: 400;
+    font-size: 100;
     letter-spacing: 8px;
     color: hsl(0, 1%, 44%);
 }
@@ -71,20 +84,41 @@ input::placeholder{
     font-weight: 800;
     text-indent: 15px;
 }
-.submit-buttom{
+.button{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     margin-right: 60px;
     position: relative;
-    right: 10px;
-    bottom: 38px;
-}
-#arrow-submit-id{
-    background-color: hsl(259, 100%, 65%);
-    border: none;
-    border-radius: 50px;
+    left: 550px;
+    bottom: 40px;
     width: 80px;
     height: 80px;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50px;
+    }
+#submit{
+    border: none;
+    width: 70%;
+    height: 70%;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#day-text,#day-out,#month-out,#years-out,#month-text,#years-text{
+    margin: 0px;
+    font-weight: bold;   
+    font-style: italic;
+    font-size: 60px;
+    margin-left: 20px;
+}
+#day-out,#month-out,#years-out{
+    color: hsl(259, 100%, 65%);
+}
+.output{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
 }

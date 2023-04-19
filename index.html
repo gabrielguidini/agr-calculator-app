@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
-  <script src="index.js"></script>
+
+
 
   
   <title>Frontend Mentor | Age calculator app</title>
@@ -21,43 +23,48 @@
   </style>
 </head>
 <body>
+  <script src="js/submit.js"></script>
   <div class="container">
-    <div class="card-bg">
-      <div class="flexbox-div">
-        <div class="input-div">
-          <div class="input-day">
-            <p id="day-id">DAY</p>
-            <input type="text" name="day" id="day" placeholder="DD">
+    <form action="">
+      <div class="card-bg">
+        <div class="flexbox-div">
+          <div class="input-div">
+            <div class="input-day">
+              <p id="day-id">DAY</p>
+              <input type="number" min="1" max="31" name="day" id="day" placeholder="DD">
+              <div class="error" id="day-error"></div>
+            </div>
+            <div class="input-month">
+              <p id="month-id">MONTH</p>
+              <input type="number" min="1" max="12"name="month" id="month" placeholder="MM">
+              <div class="error" id="month-error"></div>
+            </div>
+            <div class="input-year">
+              <p id="year-id">YEAR</p>
+              <input type="number" name="year" min="1920" max="2023" id="year" placeholder="YYYY">
+              <div class="error" id="year-error"></div>
+            </div>
           </div>
-          <div class="input-month">
-            <p id="month-id">MONTH</p>
-            <input type="text" name="month" id="month" placeholder="MM">
+          <div class="button" onclick="inputVal()">    
+            <img src="assets/images/icon-arrow.svg" alt="submit arrow" id="submit" type="submit">
           </div>
-          <div class="input-year">
-            <p id="year-id">YEAR</p>
-            <input type="text" name="year" id="year" placeholder="YYYY">
-          </div>
-        </div>
-        <div class="submit-buttom">
-          <form action="index.js" name="submit" onsubmit="return inputDay()" method="post">
-            <button type="submit" id="arrow-submit-id" value="Submit"> <img src="assets/images/icon-arrow.svg" alt="submit arrow"></button>
-          </form>
-        </div>
-        <div class="output-div">
-          <div class="output-day">
-            
-          </div>
-          <div class="output-month">
+          <div class="output">
+            <div class="year-output">
+              <p id="years-text"><span id="years-out">--</span> years</p>
+            </div>
+            <div class="month-output">
+              <p id="month-text"><span id="month-out">--</span> month</p>
+            </div>
+            <div class="day-output">
+              <p id="day-text"><span id="day-out">--</span> day</p>
+            </div>
 
-          </div>
-          <div class="output-year">
-            
+
           </div>
 
         </div>
       </div>
-
-    </div>
+    </form>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
