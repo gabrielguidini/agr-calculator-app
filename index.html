@@ -28,21 +28,24 @@
     <form action="">
       <div class="card-bg">
         <div class="flexbox-div">
-          <div class="input-div">
+          <div class="input-div" id="error">
             <div class="input-day">
+              
               <p id="day-id">DAY</p>
-              <input type="number" min="1" max="31" name="day" id="day" placeholder="DD">
-              <div class="error" id="day-error"></div>
+              <input type="number" min="1" max="31" name="Day" id="day" placeholder="DD">
+              
             </div>
             <div class="input-month">
+              
               <p id="month-id">MONTH</p>
-              <input type="number" min="1" max="12"name="month" id="month" placeholder="MM">
-              <div class="error" id="month-error"></div>
+              <input type="number" min="1" max="12"name="Month" id="month" placeholder="MM">
+              
             </div>
             <div class="input-year">
+              
               <p id="year-id">YEAR</p>
-              <input type="number" name="year" min="1920" max="2023" id="year" placeholder="YYYY">
-              <div class="error" id="year-error"></div>
+              <input type="number" name="Year" min="1920" max="2023" id="year" placeholder="YYYY">
+              
             </div>
           </div>
           <div class="button" onclick="inputVal()">    
@@ -50,13 +53,13 @@
           </div>
           <div class="output">
             <div class="year-output">
-              <p id="years-text"><span id="years-out">--</span> years</p>
+              <p id="year-text"><span id="year-out">--</span> years</p>
             </div>
             <div class="month-output">
-              <p id="month-text"><span id="month-out">--</span> month</p>
+              <p id="month-text"><span id="month-out">--</span> months</p>
             </div>
             <div class="day-output">
-              <p id="day-text"><span id="day-out">--</span> day</p>
+              <p id="day-text"><span id="day-out">--</span> days</p>
             </div>
 
 
